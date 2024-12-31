@@ -10,22 +10,22 @@ import { useDispatch } from "react-redux";
 
 const Body = () => {
   const dispatch = useDispatch();
-  const [userR, serUserR] = useState(false);
+  const [userA, setUserA] = useState(false);
 
   const appRoute = createBrowserRouter([
     {
       path: '/',
-      element: userR ? <Browse /> : <LoginSignup />,
+      element: userA ? <Browse /> : <LoginSignup />,
     },
 
     {
       path: '/browse',
-      element: userR ? <Browse /> : <LoginSignup />,
+      element: userA ? <Browse /> : <LoginSignup />,
     },
 
     {
       path: '/profile',
-      element: userR ? <Profile /> : <LoginSignup />,
+      element: userA ? <Profile /> : <LoginSignup />,
     },
 
     {
@@ -41,11 +41,11 @@ const Body = () => {
       if (user) {
         const { uid, email, displayName, photoURL } = user;
         dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
-        serUserR(true);
+        setUserA(true);
       }
       else {
         dispatch(removeUser());
-        serUserR(false);
+        setUserA(false);
       }
     });
 

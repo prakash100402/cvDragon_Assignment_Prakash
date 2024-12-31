@@ -9,11 +9,14 @@ const modeSlice = createSlice({
         },
         modeLight: ()=>{
             return "light";
-        }
+        },
+        removeMode: ()=>{
+            return null;
+        },
     },
 
 });
 
-export const { modeDark, modeLight } = modeSlice.actions;
+export const { modeDark, modeLight, removeMode } = modeSlice.actions;
 
 export default modeSlice.reducer;

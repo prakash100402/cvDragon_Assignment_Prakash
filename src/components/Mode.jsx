@@ -4,8 +4,9 @@ import { modeDark, modeLight } from "../utils/modeSlice";
 
 const Mode = () => {
     const [isDarkMode, setIsDarkMode] = useState(false);
+
     const dispatch = useDispatch();
-    
+
     const handleClick = () => {
         setIsDarkMode(!isDarkMode);
         console.log(isDarkMode);
