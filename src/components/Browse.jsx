@@ -21,30 +21,30 @@ const Browse = () => {
         <Header openNav={() => setIsOpen(true)} />
 
         <div className="w-screen bg-white dark:bg-slate-600">
-          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700">Tasks</h1>
-          <div className="w-screen ">
+          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700 pt-5">Tasks</h1>
+          <div className="w-screen pb-5">
             <Tasks/>
           </div>
           
         </div>
 
         <div className=" bg-white dark:bg-slate-600">
-          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700">Events</h1>
-          <div className="w-screen overflow-x-scroll">
+          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700 pt-5">Events</h1>
+          <div className="w-screen overflow-x-scroll pb-5">
             <Events/>
           </div>
         </div>
 
         <div className=" bg-white dark:bg-slate-600">
-          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700">Updates</h1>
-          <div className="w-screen overflow-x-scroll">
+          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700 pt-5">Updates</h1>
+          <div className="w-screen overflow-x-scroll pb-5">
             <Updates />
           </div>
         </div>
 
         <div className=" bg-white dark:bg-slate-600">
-          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700">Birthdays</h1>
-          <div className="w-screen overflow-x-scroll">
+          <h1 className="lo:text-2xl dark:text-slate-300 cursor-default p-2 bg-gradient-to-b from-slate-300 dark:from-slate-700 pt-5">Birthdays</h1>
+          <div className="w-screen overflow-x-scroll pb-5">
             <Birthday />
           </div>
         </div>

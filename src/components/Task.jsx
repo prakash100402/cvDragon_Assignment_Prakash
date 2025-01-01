@@ -11,7 +11,7 @@ const Tasks = () => {
                     <h1 className="text-center p-1 text-[12px] mo:text-lg  col-span-1 rounded-lg shadow-2xl flex items-center justify-center w-[80px] dark:bg-slate-400 dark:text-white" >{data?.status}</h1>
                     <div className="cols-span-2">
                         <h1 className=" p-1 text-[10px] mo:text-lg text-left">{data?.task}</h1>
-                        <h1 className="text-center p-1 text-[10px] mo:text-lg border-[2px] border-blue-500 rounded-full w-fit min-w-[100px]">{data?.work}</h1>
+                        <h1 className="text-center p-1 text-[10px] mo:text-lg border-[2px] border-blue-500 dark:border-blue-300 rounded-full w-fit min-w-[100px] pl-4 pr-4">{data?.work}</h1>
                     </div>
                 </div>
 

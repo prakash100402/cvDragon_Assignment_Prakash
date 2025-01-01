@@ -54,29 +54,29 @@ const Header = ({ openNav=()=>{} }) => {
 
         </div>
 
-       {userEnter && <div className="hidden mo:flex items-center">
-        <ul className="hidden gap-4 p-2 m-2 dark:text-slate-300 lo:text-lg  lo:flex ">
+        <div className="hidden mo:flex items-center">
+        {userEnter && <ul className="hidden gap-4 p-2 m-2 dark:text-slate-300 lo:text-lg  lo:flex ">
           <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Home</li>
           <li className="transition-transform duration-500 hover:scale-110 cursor-pointer" >LeaderBoard</li>
           <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Community</li>
           <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Area</li>
           <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Chats</li>
-        </ul>
+        </ul>}
 
           <Mode />
 
-          <Link to='/profile' className="size-12 ml-5 ">
+          {userEnter && <Link to='/profile' className="size-12 ml-5 ">
             <img className="rounded-full" alt="profilepic" src={HEADER_PROFILE} />
-          </Link>
+          </Link>}
 
-           <button onClick={logout}
+          {userEnter && <button onClick={logout}
             className="ml-4 pl-7 pr-7 h-[50px] rounded-md bg-slate-700 text-white dark:bg-slate-100 dark:text-black 
             hover:bg-slate-600 dark:hover:bg-gray-200 hover:scale-105 transition-transform duration-300 ease-in-out
             focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800">
             Logout
-          </button>
+          </button>}
 
-        </div>}
+        </div>
       </div>
     </div>
   );
