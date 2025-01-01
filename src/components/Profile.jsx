@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { removeUser } from "../utils/userSlice";
 import { removeMode } from "../utils/modeSlice";
+import Mode from "./Mode";
 
 const Profile = () => {
   const user = useSelector((store) => store.user);
@@ -35,13 +36,17 @@ const Profile = () => {
         <div className="w-[320px] flex flex-col items-center justify-center">
           <img alt="ppic" src={PROFILE_PIC} />
           <h1 className="text-lg text-center">{user.displayName}</h1>
+          <div className="flex items-center justify-center pt-3">
+           <Mode/>
+          </div>  
         </div>
         <button className="flex items-start justify-center" onClick={logout}>
           <img className="h-8 mo:h-14 m-2 rounded-full transition-transform duration-500 hover:scale-110 hover:shadow-lg" rel="logoutPic" src={LOGOUT_PIC} />
         </button>
       </div>
+    
 
-      <div className="grid mo:grid-cols-3 grid-cols-1 gap-2 dark:bg-slate-400 mo:pt-20">
+      <div className="grid mo:grid-cols-3 grid-cols-1 gap-2 dark:bg-slate-400 mo:pt-10">
         {[
           { name: "My Task", href: "#" },
           { name: "My Community", href: "#" },
@@ -63,7 +68,10 @@ const Profile = () => {
             {link.name} 
             <img className="h-5" alt="icon" src={ARROW} /> 
           </h1>
+         
         ))}
+
+        
       </div>
       <div className="dark:bg-slate-400 h-24">
 

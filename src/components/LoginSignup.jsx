@@ -21,7 +21,7 @@ const LoginSignup = () => {
         const message = validation(email.current.value, password.current.value);
         setErrorMessage(message);
         if (message) return;
-
+           
         //Authentication
         if (!isSignIn) {
             //sign up
@@ -30,6 +30,7 @@ const LoginSignup = () => {
                     const user = userCredential.user;
                     updateProfile(user, { displayName: name.current.value, photoURL: PROFILE_PIC })
                         .then(() => {
+                            
                             const { uid, email, displayName, photoURL } = auth.currentUser;
                             dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
                             navigate("/browse");

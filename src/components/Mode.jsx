@@ -9,7 +9,6 @@ const Mode = () => {
 
     const handleClick = () => {
         setIsDarkMode(!isDarkMode);
-        console.log(isDarkMode);
         isDarkMode ? dispatch(modeLight()) : dispatch(modeDark());
     };
     

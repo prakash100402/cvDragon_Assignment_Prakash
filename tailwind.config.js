@@ -6,9 +6,11 @@ export default {
   ],
   theme: {
     screens: {
-      'mo': '576px'
+      'mo': '576px',
+      'lo' : '786px', 
     }
   },
-  plugins: [],
+  plugins: [
+  ],
   darkMode: "class",
 }

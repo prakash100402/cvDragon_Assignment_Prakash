@@ -9,7 +9,7 @@ import { auth } from "../utils/firebase"
 import { removeMode } from "../utils/modeSlice";
 
 
-const Header = ({ openNav }) => {
+const Header = ({ openNav=()=>{} }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userEnter = useSelector((store) => store.user);
@@ -29,9 +29,9 @@ const Header = ({ openNav }) => {
 
   return (
     <div>
-      <div className="flex justify-between bg-gradient-to-r from-blue-200 to-cyan-200 dark:from-slate-900 dark:to-slate-700 mo:hidden p-2">
+      {userEnter && <div className="flex justify-between bg-gradient-to-r from-blue-200 to-cyan-200 dark:from-slate-900 dark:to-slate-700 mo:hidden p-2">
 
-        <button onClick={openNav} >
+       <button onClick={openNav} >
           <img className="size-12" alt="navicon" src={NAVBAR_ICON} />
         </button>
 
@@ -39,7 +39,7 @@ const Header = ({ openNav }) => {
           <img className="rounded-full" alt="profilepic" src={HEADER_PROFILE} />
         </Link>
 
-      </div>
+      </div>}
 
       <div className="flex justify-between h-80 mo:h-28 p-4 pt-8 bg-gradient-to-r from-blue-200 to-cyan-200 dark:from-slate-900 dark:to-slate-700">
         <div className="flex flex-row self-end">
@@ -55,6 +55,13 @@ const Header = ({ openNav }) => {
         </div>
 
        {userEnter && <div className="hidden mo:flex items-center">
+        <ul className="hidden gap-4 p-2 m-2 dark:text-slate-300 lo:text-lg  lo:flex ">
+          <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Home</li>
+          <li className="transition-transform duration-500 hover:scale-110 cursor-pointer" >LeaderBoard</li>
+          <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Community</li>
+          <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Area</li>
+          <li className="transition-transform duration-500 hover:scale-110 cursor-pointer">Chats</li>
+        </ul>
 
           <Mode />
 
@@ -76,7 +83,7 @@ const Header = ({ openNav }) => {
 };
 
 Header.propTypes = {
-  openNav: PropTypes.func.isRequired,
+  openNav: PropTypes.func,
 };
 
 export default Header;

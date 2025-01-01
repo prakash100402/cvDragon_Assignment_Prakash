@@ -5,4 +5,5 @@ export const HEADER_PROFILE = "https://i.pinimg.com/736x/8d/ff/49/8dff49985d0d8a
 export const NAVBAR_IMAGE = "https://www.iconpacks.net/icons/2/free-arrow-right-icon-3098-thumb.png";
 export const BACK = "https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-back-icon-png-image_4190818.jpg";
 export const ARROW = "https://cdn-icons-png.flaticon.com/256/32/32213.png";
+export const BACKGROUND = "https://static.vecteezy.com/system/resources/previews/024/904/099/non_2x/ancient-spirituality-illuminated-by-dramatic-sunset-sky-generated-by-ai-free-photo.jpg";
 export const LOGOUT_PIC = "https://media.istockphoto.com/id/1018739074/vector/power-turn-off-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=VbwdvU0oVPP2vPDqLod2AWi5Gws6QwALYzZ6bV0oYSc=";
